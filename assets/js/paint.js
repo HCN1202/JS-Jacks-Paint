@@ -1,5 +1,5 @@
 function configureListeners() {
-    let images = // select img elements  
+    var images = document.getElementsByTagName('img');// select img elements  
 
 
      for (var i = 0; i < images.length; i++) {        
@@ -31,7 +31,7 @@ function removeOpacity(event) {
         
     let color = document.getElementById('color-name');
         color.textContent = ''; 
-
+    
     event.preventDefault();    
 }
 
@@ -91,11 +91,13 @@ function getProductInfo(paintColor) {
     function updatePrice(colorName, price)
     {       
         let colorPrice = document.getElementById('color-price');
-        colorPrice.textContent = price;// select element with corresponding id
+        colorPrice.textContent = price;
+        // select element with corresponding id
         // display price
         
-        let color = document.getElementById('color-price');
-        colorPrice.textContent = price;// select element with corresponding id
+        let color = document.getElementById('color-name');
+        color.textContent = colorName;
+        // select element with corresponding id
         //display color name
     }
     
